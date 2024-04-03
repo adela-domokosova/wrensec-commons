@@ -153,17 +153,23 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.14.v20181114</version>
-
+                <version>10.0.18</version>
                 <configuration>
-                    <scanIntervalSeconds>2</scanIntervalSeconds>
+                    <scan>2</scan>
+                    <supportedPackagings>jar</supportedPackagings>
 
                     <webApp>
-                        <baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
-                            <resourcesAsCSV>${project.build.directory}/webapp</resourcesAsCSV>
-                        </baseResource>
+                        <resourceBases>
+                            <resourceBase>${project.build.directory}/webapp</resourceBase>
+                        </resourceBases>
                         <contextPath>/example</contextPath>
                     </webApp>
+
+                    <scanTargetPatterns>
+                        <scanTargetPattern>
+                            <directory>${project.build.directory}/webapp</directory>
+                        </scanTargetPattern>
+                    </scanTargetPatterns>
 
                     <httpConnector>
                         <port>9999</port>
