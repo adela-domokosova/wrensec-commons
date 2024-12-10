@@ -103,6 +103,11 @@ public class IWAModule implements AsyncServerAuthModule {
             return newExceptionPromise(new AuthenticationException("Invalid SPNEGO token"));
         }
 
+        // Ignore NTLM over SPNEGO
+        if (spnegoToken[0] == 'N' && spnegoToken[1] == 'T' && spnegoToken[2] == 'L' && spnegoToken[3] == 'M') {
+            return newResultPromise(SEND_FAILURE);
+        }
+
         // Perform Kerberos authentication
         try {
             final String username = new WDSSO().process(options, messageInfo, spnegoToken);
