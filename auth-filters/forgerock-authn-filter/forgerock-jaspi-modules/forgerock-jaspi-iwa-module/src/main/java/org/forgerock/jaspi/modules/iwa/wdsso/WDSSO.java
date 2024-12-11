@@ -81,11 +81,12 @@ public class WDSSO {
     private static String user;
 
     /**
-     * Process the login attempt.
-     * @param options The options.
-     * @param context The context.
-     * @param request The request.
-     * @return The result.
+     * Process Windows SSO login attempt.
+     *
+     * @param options Authentication module configuration options.
+     * @param context Request context.
+     * @param spnegoToken SPNEGO token from authorization header.
+     * @return Username of the logged user.
      * @throws Exception If an error occurred.
      */
     public String process(Map<String, Object> options, Context context, byte[] spnegoToken) throws Exception {
