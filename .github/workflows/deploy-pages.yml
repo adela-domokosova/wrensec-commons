@@ -27,7 +27,7 @@ jobs:
           distribution: "temurin"
           java-version: "17"
           cache: "maven"
-      - run: mvn -Pmetrics package site site:deploy
+      - run: mvn -P metrics package site site:deploy
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
