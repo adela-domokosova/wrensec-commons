@@ -11,22 +11,20 @@ permissions:
   contents: read
 
 jobs:
-  trigger-pull:
-    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
-    name: Handle pull_request event
-    uses: WrenSecurity/.github/.github/workflows/sonar-pull-maven.yml@main
+  prepare:
+    if: github.event.workflow_run.conclusion == 'success'
+    uses: WrenSecurity/.github/.github/workflows/sonar-prepare.yml@main
+    name: Prepare analysis context
     with:
-      java_version: "17"
-      project_key: "WrenSecurity_wrensec-commons"
       workflow_run: ${{ toJSON(github.event.workflow_run) }}
-    secrets:
-      sonar_token: ${{ secrets.SONAR_TOKEN }}
-  trigger-push:
-    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_branch == 'main'
-    name: Handle push event
+  trigger:
+    needs: prepare
+    if: needs.prepare.outputs.sonar_allowed
+    name: Trigger Sonar analysis
     uses: WrenSecurity/.github/.github/workflows/sonar-maven.yml@main
     with:
-      java_version: "17"
-      project_key: "WrenSecurity_wrensec-commons"
+      java_version: 17
+      project_key: 'WrenSecurity_wrensec-commons'
+      pull_request: ${{ needs.prepare.outputs.pull_request }}
     secrets:
       sonar_token: ${{ secrets.SONAR_TOKEN }}
