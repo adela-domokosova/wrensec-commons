@@ -12,24 +12,23 @@
     Header, with the fields enclosed by brackets [] replaced by your own identifying
     information: "Portions copyright [year] [name of copyright owner]".
 
-    Copyright 2024 Wren Security
+    Copyright 2024-2025 Wren Security
 -->
-<project
-    xmlns="http://maven.apache.org/DECORATION/1.8.0"
+<site
+    xmlns="http://maven.apache.org/SITE/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd"
+    xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd"
     name="Wren Security Commons"
     combine.self="override"
 >
     <skin>
         <groupId>org.apache.maven.skins</groupId>
         <artifactId>maven-fluido-skin</artifactId>
-        <version>1.12.0</version>
+        <version>2.1.0</version>
     </skin>
 
     <bannerLeft>
-        <alt>Wren Security</alt>
-        <src>./images/wrensecurity.png</src>
+        <image src="./images/wrensecurity.png" alt="Wren Security" />
     </bannerLeft>
 
     <publishDate position="right" />
@@ -48,4 +47,4 @@
         <menu ref="reports" inherit="top" />
         <menu ref="modules" inherit="top" />
     </body>
-</project>
+</site>

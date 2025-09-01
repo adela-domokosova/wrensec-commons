@@ -13,7 +13,7 @@
    information: "Portions copyright [year] [name of copyright owner]".
 
    Copyright 2015-2016 ForgeRock AS.
-   Portions Copyright 2017-2018 Wren Security.
+   Portions Copyright 2017-2025 Wren Security.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -21,7 +21,7 @@
     <parent>
         <groupId>org.wrensecurity</groupId>
         <artifactId>wrensec-parent</artifactId>
-        <version>4.1.0</version>
+        <version>4.2.0</version>
         <relativePath />
     </parent>
 
@@ -89,8 +89,6 @@
 
     <properties>
         <pgpVerifyKeysVersion>1.9.0</pgpVerifyKeysVersion>
-        <wrenBuildToolsVersion>1.2.0</wrenBuildToolsVersion>
-        <pmdPluginVersion>3.21.2</pmdPluginVersion>
         <jxrPluginVersion>3.3.2</jxrPluginVersion>
     </properties>
 
