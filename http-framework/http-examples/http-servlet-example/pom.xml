@@ -41,6 +41,7 @@
     <dependency>
       <groupId>org.wrensecurity.http</groupId>
       <artifactId>chf-http-servlet</artifactId>
+      <version>${project.version}</version>
     </dependency>
 
     <dependency>

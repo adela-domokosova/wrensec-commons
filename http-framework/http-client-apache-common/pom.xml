@@ -54,6 +54,7 @@
     <dependency>
       <groupId>org.wrensecurity.http</groupId>
       <artifactId>chf-http-core</artifactId>
+      <version>${project.version}</version>
     </dependency>
 
     <!-- This dependency is inherited by both the synchronous and asynchronous AHC CHF Drivers.

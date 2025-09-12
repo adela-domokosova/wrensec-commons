@@ -39,6 +39,7 @@
         <dependency>
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>json-resource</artifactId>
+            <version>${project.version}</version>
             <optional>true</optional>
         </dependency>
 

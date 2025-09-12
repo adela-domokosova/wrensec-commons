@@ -46,11 +46,13 @@
         <dependency>
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>json-resource</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>forgerock-audit-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <!-- Test Dependencies -->
@@ -75,12 +77,14 @@
         <dependency>
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>forgerock-test-utils</artifactId>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>forgerock-audit-json</artifactId>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
 

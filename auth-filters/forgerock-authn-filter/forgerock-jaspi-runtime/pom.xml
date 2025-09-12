@@ -63,11 +63,13 @@
         <dependency>
             <groupId>org.wrensecurity.http</groupId>
             <artifactId>chf-http-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency> <!-- Required for JsonValue and ResourceException -->
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>json-resource</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency> <!-- Required for MediaType in FailureResponseHandler -->

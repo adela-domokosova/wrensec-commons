@@ -50,11 +50,13 @@
     <dependency>
       <groupId>org.wrensecurity.http</groupId>
       <artifactId>chf-http-core</artifactId>
+      <version>${project.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.wrensecurity.http</groupId>
       <artifactId>chf-client-apache-common</artifactId>
+      <version>${project.version}</version>
     </dependency>
 
     <dependency>

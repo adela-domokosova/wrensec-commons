@@ -38,6 +38,7 @@
         <dependency>
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>i18n-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

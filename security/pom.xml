@@ -33,6 +33,7 @@
         <dependency>
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>forgerock-util</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
@@ -83,6 +84,7 @@
         <dependency>
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>i18n-core</artifactId>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
