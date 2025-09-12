@@ -31,6 +31,7 @@
         <dependency>
             <groupId>org.wrensecurity.http</groupId>
             <artifactId>chf-http-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
@@ -42,11 +43,13 @@
         <dependency>
             <groupId>org.wrensecurity.http</groupId>
             <artifactId>chf-client-apache-sync</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.wrensecurity.commons</groupId>
             <artifactId>forgerock-test-utils</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
